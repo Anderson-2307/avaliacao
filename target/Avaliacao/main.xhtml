@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+  <title>Avaliação</title>
+</h:head>
+<h:body>
+  <h:form>
+  	
+  	<p:panelGrid columns="2">
+  		<h:outputText value="Insituição Destinatária:" />
+		<p:inputMask mask="9999" value="#{provaController.instituicaoFinanceiraRemetente.agencia}" maxlength="4" />
+	    <h:outputText value="Insituição Favorecida:" />  
+	    <p:inputMask mask="9999" value="#{provaController.instituicaoFinanceiraDestinataria.agencia}" maxlength="4"/>
+	    <h:outputText value="Instrução" />
+	    <p:inputText value="#{provaController.linhaInformacao}"/>
+	    <p:commandButton action="#{provaController.converterLinha}" value="Enviar Linha" ajax="false"/>
+  	</p:panelGrid> 
+	
+	<p:outputPanel autoUpdate="true"> 
+		<h:outputText value="#{provaController.linhaFormatada}" />
+	</p:outputPanel>
+  </h:form>
+</h:body>
+</html>
