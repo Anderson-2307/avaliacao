@@ -1,4 +1,7 @@
 # avaliacao
+
+O banco de dados utilizado foi o Postgres e o Servidor de Aplicação Apache Tomcat, foi utilizado Java 8.
+
 Na página Inicial foi colocado 3 botões.
 
 1 - Inserir 1 Linha
